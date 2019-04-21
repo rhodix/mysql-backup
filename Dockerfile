@@ -17,6 +17,8 @@ USER appuser
 
 # install the entrypoint
 COPY functions.sh /
+COPY scripts.d/post-restore/* /scripts.d/post-restore/
+COPY scripts.d/post-backup/* /scripts.d/post-backup/
 COPY entrypoint /entrypoint
 
 # start
