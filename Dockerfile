@@ -19,6 +19,7 @@ USER appuser
 COPY functions.sh /
 COPY scripts.d/post-restore/* /scripts.d/post-restore/
 COPY scripts.d/post-backup/* /scripts.d/post-backup/
+RUN chmod -R ug+x /scripts.d
 COPY entrypoint /entrypoint
 
 # start
